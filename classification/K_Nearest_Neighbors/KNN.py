@@ -3,7 +3,7 @@
 # @File    : KNN.py
 
 from sklearn import datasets
-from sklearn.model_selection import train_test_split,cross_val_score
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 
@@ -27,7 +27,7 @@ print(y_test)
 print(knn.score(X_test, y_test))
 
 
-k_range = range(1,31)
+k_range = range(1, 31)
 k_scores = []
 for k in k_range:
     knn = KNeighborsClassifier(n_neighbors=k)
