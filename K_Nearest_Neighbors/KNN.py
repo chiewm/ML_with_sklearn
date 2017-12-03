@@ -16,11 +16,11 @@ iris_y = iris.target
 # print(iris_y)
 
 X_train, X_test, y_train, y_test = train_test_split(
-    iris_X, iris_y, test_size=0.3)
+    iris_X, iris_y, random_state=4)
 
 # print(y_train)
 
-knn = KNeighborsClassifier()
+knn = KNeighborsClassifier(n_neighbors=5)
 knn.fit(X_train, y_train)
 print(knn.predict(X_test))
 print(y_test)
